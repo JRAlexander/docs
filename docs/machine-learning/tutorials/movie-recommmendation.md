@@ -119,15 +119,6 @@ The *MovieRatingData.cs* file opens in the code editor. Add the following `using
 using Microsoft.ML.Data;
 ```
 
-Create a class called `MovieRating` by removing the existing class definition and adding the following code in `MovieRatingData.cs`:
-
-[!code-csharp[MovieRatingClass](../../../samples/machine-learning/tutorials/MovieRecommendation/MovieRatingData.cs#MovieRatingClass "Add the Movie Rating class")]
-
-`MovieRating` specifies an input data class. The [LoadColumn](xref:Microsoft.ML.Data.LoadColumnAttribute.%23ctor%28System.Int32%29) attribute specifies which columns (by column index) in the dataset should be loaded. The `userId` and `movieId` columns are your `Features` (the inputs you will give the model to predict the `Label`), and the rating column is the `Label` that you will predict (the output of the model).
-
-
-
-
 Specify an input data class named `MovieRating`. Use the [LoadColumn attribute](xref:Microsoft.ML.Data.LoadColumnAttribute.%23ctor%28System.Int32%29) to specify which columns (by column index) in the dataset should be loaded. The `userId` and `movieId` columns are your `Features` (the inputs you will give the model to predict the `Label`), and the rating column is the `Label` that you will predict (the output of the model).
 
 Create the `MovieRating` class by removing the existing class definition and adding the following code in `MovieRatingData.cs`:
@@ -449,13 +440,6 @@ This is only one approach for performing movie recommendations. In many cases, y
 | ------------- |:-------------:| -----:|
 | One Class Matrix Factorization | Use this when you only have userId and movieId. This style of recommendation is based upon the co-purchase scenario, or products frequently bought together, which means it will recommend to customers a set of products based upon their own purchase order history. | [>Try it out](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/getting-started/MatrixFactorization_ProductRecommendation) |
 | Field Aware Factorization Machines | Use this to make recommendations when you have more Features beyond userId, productId, and rating (such as product description or product price). This also uses a collaborative filtering approach. | [>Try it out](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/end-to-end-apps/Recommendation-MovieRecommender) |
-
-
-## Other ML.NET Scenarios
-Try out another tutorial to use ML.NET for other Machine Learning scenarios:
-
-| [Taxi fare prediction (regression)](../tutorials/taxi-fare) | [Sentiment analysis (binary classification)](../tutorials/sentiment-analysis.md) | [Issue classification (multi-class classification)](..tutorials/github-issue-classification.md) |
-| ------------- |:-------------:| -----:|
 
 ## Next steps
 In this tutorial, you learned how to:
